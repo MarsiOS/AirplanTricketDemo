@@ -49,6 +49,8 @@
 
 @property (nonatomic ,strong)UserCheckTricketModel *userModel;
 
+@property (nonatomic ,strong)selectJourney *userCell;
+
 @end
 
 @implementation UserCheckTicketController
@@ -58,6 +60,7 @@
     [super viewWillAppear:animated];
     //移除数组的数据
     [self.ticketInfo removeAllObjects];
+    self.userCell.userInteractionEnabled = YES;
 }
 
 - (void)viewDidLoad {
@@ -98,6 +101,7 @@
         [self.ticketInfo addObject:model];
     }
     [SVProgressHUD dismiss];//<页面跳转dissmiss SVP
+//    weakCell.userInteractionEnabled = NO;
     AirPlanTicketPriceTBVC *apVC = [[AirPlanTicketPriceTBVC alloc] init];
     apVC.ticketInfo = self.ticketInfo;
     [self.navigationController pushViewController:apVC animated:YES];//<push
@@ -123,6 +127,7 @@
 
 -  (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     selectJourney *cell = [selectJourney regiestCell:tableView];
+    self.userCell = cell;
     [self dataCallBack:cell];
     return cell;
 }
@@ -172,6 +177,7 @@
  
     cell.searchDataCallBack = ^(NSString *dataSelect , NSString *startP , NSString *endP){
         [SVProgressHUD showProgress:1.0 status:@"正在加载ing....."];
+        weakCell.userInteractionEnabled = NO;
         [weakSelf loadWebViewData:dataSelect startPlace:startP endPlace:endP];//<webView请求数据
     };
 }

@@ -8,6 +8,7 @@
 
 
 #import "selectJourney.h"
+#import "SVProgressHUD.h"
 @interface selectJourney ()
 
 @end
@@ -66,6 +67,15 @@
 
 //搜索btn
 - (IBAction)searchBtn:(id)sender {
+    if([self.startP.text isEqualToString:self.endP.text]){
+        [SVProgressHUD showErrorWithStatus:@"起始地点一致,请重新选择"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            self.userInteractionEnabled = YES;
+            [SVProgressHUD dismiss];
+        });
+            self.userInteractionEnabled = NO;
+        return;
+    }
     self.searchDataCallBack(self.data,self.startP.text,self.endP.text);
 }
 
