@@ -98,7 +98,7 @@
                 <outlet property="startPlace" destination="mae-fF-EyJ" id="0h2-V3-IgL"/>
                 <outlet property="startTime" destination="yUB-Kf-DI4" id="zAi-w7-CIw"/>
             </connections>
-            <point key="canvasLocation" x="311.5" y="199.5"/>
+            <point key="canvasLocation" x="437.5" y="189.5"/>
         </tableViewCell>
     </objects>
 </document>

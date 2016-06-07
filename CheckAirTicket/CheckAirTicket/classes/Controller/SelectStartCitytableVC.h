@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^selectCityCallBack)(NSString *city);
+typedef void(^selectCityCallBack)(NSString *city); 
 
 @interface SelectStartCitytableVC : UITableViewController
 
-//选中城市回调
-@property(nonatomic,copy)selectCityCallBack cityCallBack;
+@property(nonatomic,copy)selectCityCallBack cityCallBack;//<选中城市回调
 @end

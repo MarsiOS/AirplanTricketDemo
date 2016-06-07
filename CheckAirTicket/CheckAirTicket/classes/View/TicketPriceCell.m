@@ -31,19 +31,14 @@
 @implementation TicketPriceCell
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
-
     if( self = [super initWithCoder:aDecoder]){
-
-        
+      //test
     }
-
     return self;
 }
 
 + (instancetype)registTicketCell:(UITableView *)tableView{
-
     return [[[NSBundle mainBundle]loadNibNamed:@"TicketPriceCell" owner:self options:nil]lastObject];
-
 }
 
 - (void)setAttr:(UserCheckTricketModel *)attr{
@@ -56,7 +51,6 @@
     self.priceLabel.text = attr.ticketPrice_M;
     self.moreLabel.text = attr.moreInfo_M;
     self.airType.text = attr.companyType_M;
-
 }
 
 @end

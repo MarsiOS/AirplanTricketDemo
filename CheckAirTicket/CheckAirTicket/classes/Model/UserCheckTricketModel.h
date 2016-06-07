@@ -26,7 +26,6 @@
 
 @property(nonatomic,copy)NSString *companyType_M;//<飞机类型
 
-
 + (instancetype)UserCheckTricketModelWithDict:(NSDictionary *)dict;
 
 @end

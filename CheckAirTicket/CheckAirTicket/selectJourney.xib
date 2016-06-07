@@ -47,7 +47,7 @@
                                 <color key="textColor" red="0.62878787879999998" green="0.62878787879999998" blue="0.62878787879999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgJ-2Q-fnc">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgJ-2Q-fnc">
                                 <rect key="frame" x="134" y="25" width="53" height="45"/>
                                 <state key="normal" backgroundImage="Snip20160606_1"/>
                                 <connections>

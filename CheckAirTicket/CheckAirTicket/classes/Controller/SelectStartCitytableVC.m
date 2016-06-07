@@ -18,8 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-  
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,26 +37,19 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
-
     cell.textLabel.text = self.arrM[indexPath.row];
-    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
     self.cityCallBack(self.arrM[indexPath.row]);
-    
     [self.navigationController popViewControllerAnimated:YES];
-    
 }
 
 - (NSArray *)arrM{
-
     if (_arrM == nil) {
         _arrM = [[NSArray alloc] initWithObjects:@"广州",@"深圳",@"北京",@"上海",@"成都",@"长沙",@"厦门",@"三亚",@"南京",@"杭州", nil];
     }
-    
     return _arrM;
 }
 @end

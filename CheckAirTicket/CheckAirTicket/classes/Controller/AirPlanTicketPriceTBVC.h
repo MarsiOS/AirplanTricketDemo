@@ -10,6 +10,6 @@
 
 @interface AirPlanTicketPriceTBVC : UITableViewController
 
-@property (nonatomic ,strong)NSArray *ticketInfo;
+@property (nonatomic ,strong)NSArray *ticketInfo;//<机票模型数组
 
 @end

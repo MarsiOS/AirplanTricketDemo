@@ -35,16 +35,13 @@
     return self.ticketInfo.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     TicketPriceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"T_cell"];
     if (cell == nil) {
         cell = [TicketPriceCell registTicketCell:tableView];
     }
-    
     cell.attr = self.ticketInfo[indexPath.row];
-    
     return cell;
 }
 

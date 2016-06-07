@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @class UserCheckTricketModel;
 
 @interface TicketPriceCell : UITableViewCell
 
-+(instancetype)registTicketCell:(UITableView *)tableView;
-
-@property (nonatomic ,strong)UserCheckTricketModel *attr;
++(instancetype)registTicketCell:(UITableView *)tableView;//<注册自定义cell
+@property (nonatomic ,strong)UserCheckTricketModel *attr;//<模型
 
 @end

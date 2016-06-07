@@ -11,14 +11,10 @@
 @implementation UserCheckTricketModel
 
 + (instancetype)UserCheckTricketModelWithDict:(NSDictionary *)dict{
-
     id obj = [[self alloc] init];
-    
     if(obj){
-    
         [obj setValuesForKeysWithDictionary:dict];
     }
-
     return obj;
 }
 
