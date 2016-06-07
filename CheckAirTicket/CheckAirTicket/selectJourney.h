@@ -10,7 +10,7 @@
 
 typedef void (^myblock)();
 
-typedef void(^searchCallBack)(NSString *dataSelect , NSString *startP , NSString *endP); 
+typedef void(^searchCallBack)(NSString *dataSelect , NSString *startP , NSString *endP);
 
 @interface selectJourney : UITableViewCell
 
@@ -25,6 +25,10 @@ typedef void(^searchCallBack)(NSString *dataSelect , NSString *startP , NSString
 @property(nonatomic,copy)searchCallBack searchDataCallBack;//搜索按钮回调
 
 @property (weak, nonatomic) IBOutlet UIButton *dataSelectBtn;//<选择日期btn
+
+@property (weak, nonatomic) IBOutlet UILabel *startP;
+
+@property (weak, nonatomic) IBOutlet UILabel *endP;
 
 @property(nonatomic,copy)NSString *currentDate; //<当前时间
 

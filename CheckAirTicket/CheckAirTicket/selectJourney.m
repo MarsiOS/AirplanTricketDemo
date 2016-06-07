@@ -52,7 +52,11 @@
 
 //双向按钮
 - (IBAction)ovonicPlaceBtn:(id)sender {
-    NSLog(@"%s",__FUNCTION__);
+
+    NSString *temp = self.startP.text;
+    self.startP.text = self.endP.text;
+    self.endP.text = temp;
+    
 }
 
 //日期选择
@@ -62,7 +66,7 @@
 
 //搜索btn
 - (IBAction)searchBtn:(id)sender {
-    self.searchDataCallBack(self.data,self.startPBtn.titleLabel.text,self.endPBtn.titleLabel.text);
+    self.searchDataCallBack(self.data,self.startP.text,self.endP.text);
 }
 
 //segmentBtn

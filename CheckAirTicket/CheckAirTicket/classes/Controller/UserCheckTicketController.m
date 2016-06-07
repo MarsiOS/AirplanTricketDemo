@@ -158,7 +158,7 @@
         SelectStartCitytableVC *svc = [[SelectStartCitytableVC alloc] init ];
         [self.navigationController pushViewController:svc animated:YES];
         svc.cityCallBack = ^(NSString *city){
-        weakCell.startPBtn.titleLabel.text = city;
+        weakCell.startP.text = city;
         };
     };
     
@@ -166,7 +166,7 @@
         SelectStartCitytableVC *svc = [[SelectStartCitytableVC alloc] init ];
         [self.navigationController pushViewController:svc animated:YES];
         svc.cityCallBack = ^(NSString *city){
-        weakCell.endPBtn.titleLabel.text = city;
+        weakCell.endP.text = city;
         };
     };
  
