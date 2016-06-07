@@ -38,9 +38,4 @@ typedef void(^searchCallBack)(NSString *dataSelect , NSString *startP , NSString
 
 @property (weak, nonatomic) IBOutlet UIButton *endPBtn;//<目的地Btn
 
-@property(nonatomic,copy)NSString *fristPlace;
-
-@property(nonatomic,copy)NSString *secondPlace;
-
-
 @end

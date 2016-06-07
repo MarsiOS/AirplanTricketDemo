@@ -28,7 +28,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.arrM.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -48,7 +48,7 @@
 
 - (NSArray *)arrM{
     if (_arrM == nil) {
-        _arrM = [[NSArray alloc] initWithObjects:@"广州",@"深圳",@"北京",@"上海",@"成都",@"长沙",@"厦门",@"三亚",@"南京",@"杭州", nil];
+        _arrM = [[NSArray alloc] initWithObjects:@"广州",@"深圳",@"北京",@"上海",@"成都",@"长沙",@"厦门",@"三亚",@"南京",@"杭州",@"重庆",@"海口",@"青岛",nil];
     }
     return _arrM;
 }

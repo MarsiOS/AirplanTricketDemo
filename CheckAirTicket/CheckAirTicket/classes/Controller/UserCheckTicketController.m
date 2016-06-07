@@ -21,7 +21,7 @@
     CalendarHomeViewController *chvc;
 }
 
-@property (weak, nonatomic) IBOutlet UITableView *UserCheckTicketTabblView;//<用户选择行程TableView/Users/mars/Desktop/文件/Xcode工程/测试块/CheckAirTicket/CheckAirTicket/classes/Model/UserCheckTricketModel.m
+@property (weak, nonatomic) IBOutlet UITableView *UserCheckTicketTabblView;
 
 @property (nonatomic ,strong)UIWebView *checkTicketWebView; ///<选择查询界面webView
 
@@ -77,11 +77,11 @@
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.checkTicketWebView loadRequest:request];
-    NSLog(@"1:%@ , 2:%@ , 3:%@" ,dataSelect,startP,endP);
+    NSLog(@"日期:%@ , %@ -----> %@" ,dataSelect,startP,endP);
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 12; i++) {
         NSString *startTime = [self getTicketDataByJavaScriptClassName:@"from-time time-font" andTicketsArrayIndex:i andwebView:webView];//<起飞时间
         NSString *startPlace = [self getTicketDataByJavaScriptClassName:@"from-place ellipsis" andTicketsArrayIndex:i andwebView:webView];//<起飞机场
         NSString *endTime = [self getTicketDataByJavaScriptClassName:@"to-time time-font" andTicketsArrayIndex:i andwebView:webView];//<降落时间
