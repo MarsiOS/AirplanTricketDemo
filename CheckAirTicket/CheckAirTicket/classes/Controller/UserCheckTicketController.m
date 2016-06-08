@@ -153,7 +153,7 @@
         NSString *dataM1 = [dataM substringWithRange:range1];
         NSRange range2 = NSMakeRange(8, 2);
         NSString *dataM2 = [dataM substringWithRange:range2];
-        weakCell.dataSelectBtn.titleLabel.text = [NSString stringWithFormat:@"%@月%@日",dataM1,dataM2];
+        weakCell.selectDate.text = [NSString stringWithFormat:@"%@月%@日",dataM1,dataM2];
         weakCell.data = dataM;//<记录选中的值
 };
     [self.navigationController pushViewController:chvc animated:YES];

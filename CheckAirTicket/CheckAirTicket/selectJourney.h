@@ -30,6 +30,8 @@ typedef void(^searchCallBack)(NSString *dataSelect , NSString *startP , NSString
 
 @property (weak, nonatomic) IBOutlet UILabel *endP;
 
+@property (weak, nonatomic) IBOutlet UILabel *selectDate;
+
 @property(nonatomic,copy)NSString *currentDate; //<当前时间
 
 @property(nonatomic,copy)NSString *data;//<带年月日时间

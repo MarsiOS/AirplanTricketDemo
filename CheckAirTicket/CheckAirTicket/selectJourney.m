@@ -38,7 +38,7 @@
     NSString *dataM1 = [dateStr substringWithRange:rangeDate1];
     NSRange rangeDate2 = NSMakeRange(8, 2);
     NSString *dataM2 = [dateStr substringWithRange:rangeDate2];
-    self.dataSelectBtn.titleLabel.text = [NSString stringWithFormat:@"%@月%@日",dataM1,dataM2];
+    self.selectDate.text = [NSString stringWithFormat:@"%@月%@日",dataM1,dataM2];
 }
 
 //初始地点
